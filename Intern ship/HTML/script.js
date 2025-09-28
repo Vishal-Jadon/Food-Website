@@ -22,7 +22,7 @@
 
     alert("Registration successful! Now login.");
     // Optionally redirect
-    // window.location.href = "hii.html";
+    // window.location.href = "index.html";
   }
 
   // Handle Login and check with localStorage
@@ -48,33 +48,49 @@
       alert("Wrong details. Please try again.");
     }
   }
+function updateAuthStatus() {
+  const authLink = document.getElementById("authLink");
+  const username = localStorage.getItem("username");
+  const email = localStorage.getItem("email");
+  const password = localStorage.getItem("password");
+
+  if (username && email && password) {
+    // Split name into words (e.g., "Vishal Jadon")
+    const parts = username.trim().split(" ");
+    let initials = "";
+
+    if (parts.length === 1) {
+      // Single name (just take first letter)
+      initials = parts[0].charAt(0).toUpperCase();
+    } else {
+      // First + Last word initials
+      initials =
+        parts[0].charAt(0).toUpperCase() +
+        parts[parts.length - 1].charAt(0).toUpperCase();
+    }
+
+    authLink.innerHTML = `
+      <span class="user-circle">${initials}</span> Logout
+    `;
+    authLink.href = "#";
+
+    authLink.onclick = function () {
+      if (confirm("Are you sure you want to logout?")) {
+        localStorage.clear();
+        alert("Logged out successfully!");
+        window.location.href = "index.html";
+      }
+    };
+  } else {
+    authLink.innerHTML = "Login";
+    authLink.href = "login.html";
+    authLink.onclick = null;
+  }
+}
+
+window.addEventListener("DOMContentLoaded", updateAuthStatus);
 
 
-//function signup() {
-//   let user = document.getElementById("signupUser").value;
-//   let pass = document.getElementById("signupPass").value;
-//   if(user && pass) {
-//     localStorage.setItem("user", JSON.stringify({ user, pass }));
-//     alert("Signup successful! Please login.");
-//     window.location.href = "login.html";
-//   } else {
-//     alert("Please fill all fields!");
-//   }
-// }
-
-// function login() {
-//   let user = document.getElementById("loginUser").value;
-//   let pass = document.getElementById("loginPass").value;
-//   let savedUser = JSON.parse(localStorage.getItem("user"));
-
-//   if(savedUser && user === savedUser.user && pass === savedUser.pass) {
-//     localStorage.setItem("loggedIn", "true");
-//     alert("Login successful!");
-//     window.location.href = "index.html";
-//   } else {
-//     alert("Invalid username or password!");
-//   }
-// }
 // ----------add cart--------------
 // Load cart from localStorage or initialize
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -168,4 +184,5 @@ document.getElementById("checkoutForm").addEventListener("submit", function(e) {
 
   alert(`✅ Order placed!\n\nName: ${name}\nPhone: ${phone}\nAddress: ${address}, ${city} - ${pincode}\nPayment: ${payment}`);
 });
+
 
