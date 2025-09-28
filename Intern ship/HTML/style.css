@@ -345,4 +345,19 @@ form button:hover {
   font-weight: bold;
   color: #222;
 }
+.user-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f99292;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+
 
