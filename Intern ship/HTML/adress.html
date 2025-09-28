@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodiesssz.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <header>
+  <h1>🍴 Foodiesssz</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="orders.html">My Orders</a>
+
+  </nav>
+</header>
+
+       
+      
+    <form id="checkoutForm">
+  <label for="fullName">Full Name:</label>
+  <input type="text" id="fullName" required>
+
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" required pattern="[0-9]{10}" placeholder="10-digit number">
+
+  <label for="address">Address:</label>
+  <textarea id="address" rows="3" required></textarea>
+
+  <label for="city">City:</label>
+  <input type="text" id="city" required>
+
+  <label for="pincode">Pincode:</label>
+  <input type="text" id="pincode" required pattern="[0-9]{6}" placeholder="6-digit PIN">
+
+  <label for="payment">Payment Method:</label>
+  <select id="payment">
+    <option value="COD">Cash on Delivery</option>
+    <option value="Card">Credit/Debit Card</option>
+    <option value="UPI">UPI</option>
+  </select>
+
+  <h3 id="finalAmount">Total: ₹0</h3>
+
+  <button type="submit">Place Order ✅</button>
+</form>
+  <script src="script.js"></script>
+</body>
+</html>

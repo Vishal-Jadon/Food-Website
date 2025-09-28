@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodiesssz.com</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true" />
+
+      <div class="signup">
+        <form id="signupForm" onsubmit="return handleSignup(event)">
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input
+            type="text"
+            id="Username"
+            name="txt"
+            placeholder="Username"
+            minlength="4"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            name="pswd"
+            placeholder="Password"
+            minlength="8"
+            maxlength="8"
+            required
+          />
+          <button type="submit">Sign up</button>
+        </form>
+      </div>
+
+      <div class="login">
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+          <label for="chk" aria-hidden="true">Login</label>
+          <input
+            type="email"
+            name="email"
+            id="email1"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            name="pswd"
+            id="pass"
+            placeholder="Password"
+            required
+          />
+        <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+   
+    </section>
+  </body>
+</html>

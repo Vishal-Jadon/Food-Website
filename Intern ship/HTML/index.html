@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodiesssz.com</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <h1>🍴 Foodiesssz</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="orders.html">My Orders</a>
+    <a href="Login.html" id="authLink">Login</a>
+    <!-- Cart icon with counter -->
+    <a href="orders.html" class="cart-nav">
+      🛒 Cart (<span id="cartCount">0</span>)
+    </a>
+  </nav>
+</header> 
+
+  <section class="hero">
+    <img src="" alt="">
+    Delicious Food Delivered To You For Foodiesss.com 🚀
+  </section>
+
+
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu">
+
+    <div class="card animate">
+        <img src="Images/jamun.jpeg" alt="Gullab Jamun">
+        <h3>Gullab Jamun</h3>
+        <p>₹400</p>
+        <button onclick="addToCart('Gullab Jamun',70)">Add to Cart</button>
+      </div>
+
+       <div class="card animate">
+        <img src="Images/white.jpeg" alt="White Chena">
+        <h3>White Chena</h3>
+        <p>₹500</p>
+        <button onclick="addToCart('White Chena',70)">Add to Cart</button>
+      </div>
+
+       <div class="card animate">
+        <img src="Images/chicke.jpeg" alt="Non-veg Burger">
+        <h3>Chicken Burger</h3>
+        <p>₹250</p>
+        <button onclick="addToCart('Non-veg Burger',250)">Add to Cart</button>
+      </div>
+      <div class="card animate">
+        <img src="Images/chicken.jpeg
+        " alt="Non-veg Burger">
+        <h3>Veggie Burger</h3>
+        <p>₹170</p>
+        <button onclick="addToCart('Non-veg Burger',170)">Add to Cart</button>
+      </div>
+    
+      <div class="card animate">
+        <img src="Images/juice.jpeg" alt="Juice">
+        <h3>Fresh Juice</h3>
+        <p>₹80</p>
+        <button onclick="addToCart('Fresh Juice',80)">Add to Cart</button>
+      </div>
+      <div class="card animate">
+        <img src="Images/water.jpeg" alt="Juice">
+        <h3>Water Melon Juice</h3>
+        <p>₹50</p>
+        <button onclick="addToCart('Water Melon juice ',80)">Add to Cart</button>
+      </div><div class="card animate">
+        <img src="Images/wishkey.jpeg" alt="Alcohol">
+        <h3>Whiskey</h3>
+        <p>₹800</p>
+        <button onclick="addToCart('Alcohol',80)">Add to Cart</button>
+      </div>
+
+
+    <!-- Burger -->
+    <div class="card animate">
+      <img src="Images/chees.jpeg" alt="Burger">
+      <h3>Cheese Burger</h3>
+      <p>Juicy beef burger with cheese</p>
+      <p>₹150</p>
+      <button onclick="addToCart('Cheese Burger',150)">Add to Cart</button>
+    </div>
+
+    <!-- Pizza -->
+    <div class="card animate">
+      <img src="Images/magrita.jpeg" alt="Pizza">
+      <h3>Margherita Pizza</h3>
+      <p>Classic cheese pizza</p>
+      <p>₹250</p>
+      <button onclick="addToCart('Margherita Pizza',250)">Add to Cart</button>
+    </div>
+
+    <!-- Salad -->
+    <div class="card animate">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Salad">
+      <h3>Fresh Salad</h3>
+      <p>Healthy & refreshing</p>
+      <p>₹120</p>
+      <button onclick="addToCart('Fresh Salad',120)">Add to Cart</button>
+    </div>
+
+    <!-- Drinks -->
+    <div class="card animate">
+      <img src="Images/cold.jpeg" alt="Coke">
+      <h3>Cold Drink</h3>
+      <p>Refreshing chilled beverage</p>
+      <p>₹60</p>
+      <button onclick="addToCart('Cold Drink',60)">Add to Cart</button>
+    </div>
+
+    <!-- Pasta -->
+    <div class="card animate">
+      <img src="Images/pasta.jpeg" alt="Pasta">
+      <h3>Italian Pasta</h3>
+      <p>Creamy Alfredo pasta</p>
+      <p>₹180</p>
+      <button onclick="addToCart('Italian Pasta',180)">Add to Cart</button>
+    </div>
+
+    <!-- Donuts -->
+    <div class="card animate">
+      <img src="Images/nuts.jpeg" alt="Donuts">
+      <h3>Chocolate Donuts</h3>
+      <p>Sweet & soft with chocolate glaze</p>
+      <p>₹90</p>
+      <button onclick="addToCart('Chocolate Donuts',90)">Add to Cart</button>
+    </div>
+  
+  </section>
+
+
+  
+
+   <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>🍴 FoodExpress</h2>
+        <p>Delicious food delivered at your doorstep 🚀</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">🏠 Home</a></li>
+          <li><a href="orders.html">📦 My Orders</a></li>
+          <li><a href="login.html">🔑 Login</a></li>
+          <li><a href="signup.html">📝 Signup</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>📍 123 Food Street, Delhi, India</p>
+        <p>📞 +91 98765 43210</p>
+        <p>📧 support@foodexpress.com</p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="#">🌐 Facebook</a>
+        <a href="#">📸 Instagram</a>
+        <a href="#">🐦 Twitter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FoodExpress | All Rights Reserved ❤️</p>
+    </div>
+  </footer>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
